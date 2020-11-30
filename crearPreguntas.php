@@ -57,10 +57,20 @@ if (isset($_POST['save_task'])) {
 					<?php
 					}
 					 ?>
+           <input type="file" class="form-control" id="archivo" name="archivo<?php echo$i?>"> <br>
 
-					     <input name="pregunta<?php echo$i?>Respuesta1" type="text" class="form-control"  placeholder="respuesta 1 -- puntos +0">
-					     <input name="pregunta<?php echo$i?>Respuesta2" type="text" class="form-control"  placeholder="respuesta 2 -- puntos +1">
-					     <input name="pregunta<?php echo$i?>Respuesta3" type="text" class="form-control"  placeholder="respuesta 3 -- puntos +3">
+
+
+					     <input name="pregunta<?php echo$i?>Respuesta1" type="text" class="form-control"  placeholder="respuesta 1">
+					     <input name="pregunta<?php echo$i?>Respuesta2" type="text" class="form-control"  placeholder="respuesta 2">
+					     <input name="pregunta<?php echo$i?>Respuesta3" type="text" class="form-control"  placeholder="respuesta 3">
+
+               <input type="radio" id="correcta" name="correcta<?php echo$i?>" value="1">
+                           <label for="carrera"> 1</label><br>
+                           <input type="radio" id="correcta" name="correcta<?php echo$i?>" value="2">
+                           <label for="carrera"> 2</label><br>
+                           <input type="radio" id="correcta" name="correcta<?php echo$i?>" value="3">
+                           <label for="carrera"> 3</label><br>
 
                         </div>
 

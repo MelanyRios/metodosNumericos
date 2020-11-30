@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.0.1">
-    <title>Blog Template · Bootstrap</title>
+    <title>Métodos Numéricos</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">
 
@@ -67,8 +67,7 @@
     <nav class="nav d-flex justify-content-start">
       <a class="p-2 text-white" href="#">Inicio</a>
       <a class="p-2 text-white" href="listaTests.html">Test</a>
-      <a class="p-2 text-white" href="#">Universidades</a>
-      
+
 
       
     </nav>
@@ -88,9 +87,23 @@ if(isset($_GET['id'])) {
     die(" Sentencia query fallida.");
   }
   $area=0;
+
   while ($row0 = mysqli_fetch_array($result0)){
 
      $area= $row0['TesAreCod'];
+  }
+  
+  
+  $query = "SELECT * FROM area WHERE AreCod = $area";
+  $result00 = mysqli_query($conn, $query);
+  if(!$result00) {
+    die(" Sentencia query fallida.");
+  }
+  $nombreArea="";
+
+  while ($row00 = mysqli_fetch_array($result00)){
+
+     $nombreArea= $row00['AreNom'];
   }
 
 
@@ -99,15 +112,17 @@ if(isset($_GET['id'])) {
   if(!$result) {
     die(" Sentencia query fallida.");
   }
+
+
 }
 
   ?>
  <br>
- <center><h2>Test  Vocacional </h2></center>
-  <div class="container p-4">
-  <div class="row">
-    <div class="col-md-8 mx-auto">
-      <div class="card card-body">
+
+ <center><h2><?php echo $nombreArea ?> </h2></center>
+  
+        <main role="main" class="container">
+          <div class="jumbotron">
         <form action="ResultadoTestVo.php?id=<?php echo $TestCod ?> " method="POST">
        
         <?php  
@@ -122,32 +137,24 @@ if(isset($_GET['id'])) {
 
               <input disabled="disabled" name="pregunta<?php echo $i ?>" type="text" class="form-control" value="<?php echo $row['PreNom']; ?>"  >
 
+              
+
               <?php 
+
+              $file ="ImagenesPre/".$preCodigo.".png";
+              $exists = is_file( $file );
+
+              if($exists == true){
+ ?>
+                <img src="<?php echo $file ?>"> <br>
+
+                 <?php 
+              }
                   
                   $query2 = "SELECT *FROM carrera where CarAreCod = $area  ";
                   $resultado=mysqli_query($conn,$query2);
                   
-                /**
-                while ($row2 = mysqli_fetch_array($resultado)) { 
-
-                  if($row['PreCarCod'] == $row2 ['CarCod']){
-
-
-                  ?>  
-
-                     <input  type="radio" id="carrera" name="carreraPregunta<?php echo $i ?>" value="<?php echo $row2 ['CarCod']; ?>" checked >
-                           <label for="carrera"> <?php echo $row2 ['CarNom'] ?></label><br>  
-                     <?php
-                 } 
-
-                  else {
-                  ?>
-                   <input disabled="disabled" type="radio" id="carrera" name="carreraPregunta<?php echo $i ?>" value="<?php echo $row2 ['CarCod']; ?>">
-                           <label for="carrera"> <?php echo $row2 ['CarNom'] ?></label><br>
-                     <?php
-                    }
-               }
-               **/
+             
                
                 $query3 = "SELECT *FROM respuestas where ResPreCod = $preCodigo ";
                 $resultado3=mysqli_query($conn,$query3);
@@ -174,11 +181,12 @@ if(isset($_GET['id'])) {
              $i=$i+1;
            } ?>
 
-            <button class="btn-success" name="respuestas_TestVo"> Evaluar respuestas </button>
-          </form>
+           
 
+            <button class="btn btn-lg btn-primary" name="respuestas_TestVo"> Evaluar respuestas </button>
+          </form>
 </div>
-</div>
-</div>
-</div>
+        </main>
+
+
 <?php include('includes/footer.php'); ?>

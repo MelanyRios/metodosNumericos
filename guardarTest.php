@@ -34,9 +34,11 @@ if (isset($_POST['save_test'])) {
 	while ($i<=$numPre) {
 		$prNom="pregunta".$i;
 		$prCar= "carreraPregunta".$i;
+        $correcta="correcta".$i;
 
         $preNombre = $_POST[$prNom];
         $preCarrera=$_POST[$prCar];
+        $corr=$_POST[$correcta];
 
     $queryPre = " INSERT INTO preguntas (PreTesCod,PreNom,PreCarCod) VALUES ('$idTest','$preNombre','$preCarrera')";
 
@@ -52,7 +54,10 @@ if (isset($_POST['save_test'])) {
         $j=1;
         while($j<=3){
 
-            $valor=$j-1;
+            $valor=0;
+            if($corr == $j){
+                $valor=1;
+            }
 
         	$rptNom="pregunta".$i."Respuesta".$j;   
 		    

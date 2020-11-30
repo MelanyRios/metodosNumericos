@@ -27,7 +27,7 @@ if (isset($_POST['respuestas_TestVo'])) {
     $totalXCarr[0]=0;
     $j=0;
     while ($row2 = mysqli_fetch_array($resultado2)) {
-        $carrerasCod[$j]=$row2['CarCod'];
+        $carrerasCod[$j]=$row2['CarCod']; // codigo de carrera
         $puntajeCarr[$j]=0;
         $totalXCarr[$j]= 0;
         $j++;      
@@ -75,7 +75,7 @@ if (isset($_POST['respuestas_TestVo'])) {
         $k=0;
         while($k<$j){
             if($carrDePreg==$carrerasCod[$k]){
-                $totalXCarr[$k]=$totalXCarr[$k]+3;
+                $totalXCarr[$k]=$totalXCarr[$k]+1;
                 $puntajeCarr[$k]=$puntajeCarr[$k]+$valorResp;
             }
             $k++;
@@ -236,14 +236,7 @@ if (isset($_POST['respuestas_TestVo'])) {
           <input id="tab" name="prodId" type="hidden" value="<?php echo $nomCarreraTotal ?>">
 
 <br>
-          <form method="POST">
-              <input id="paraPDF" name="docPDF" type="hidden" value="<?php echo $nomCarreraTotal ?>">
-
-              <input type="button" class="btn btn-secondary col-md-3 mb-3"- value="Generar" name="submit"   onclick="enviar_datos_PDF();" /> 
-              <!--<input type="submit" class="stretched-link" value="Descargar Resultados" name="DOWLO"/> -->
-
-
-          </form>
+          
           <div id="mostrarPDF" class="col-md-3 mb-3 bg-info text-white">
           </div>
 
@@ -270,7 +263,8 @@ type: 'bar',
 data: {
 labels: <?php echo $datosX ?>,
 datasets: [{
-label: "porcentaje de aptabilidad",
+label: "porcentaje preguntas ",
+
 data: <?php echo $datosY ?>,
 backgroundColor: [
 'rgba(255, 99, 132, 0.2)',
@@ -296,6 +290,7 @@ scales: {
 yAxes: [{
 ticks: {
 beginAtZero: true
+
 }
 }]
  
@@ -315,7 +310,7 @@ beginAtZero: true
           <strong class="d-inline-block mb-2 text-primary">Enviar los resultados al correo electronico</strong>
 
  <!--determinar el tipo de información-->
- <p>Puedes enviarte los resultados a tu correo electrónico para consultarlos más tarde. También es posible mandarlos a la dirección de tu maestro u orientador vocacional para que vea en qué destacas y así sepan cómo ayudarte mejor.</p>
+ <p>Puedes enviarte los resultados a tu correo electrónico para consultarlos más tarde. También es posible mandarlos a la dirección de tu maestro u orientador para evaluar tus conocimientos.</p>
 <strong>Email: </strong>
 <input type="email" class="col-md-5 mb-5" id="direccion" name="correo" placeholder="Introduce un correo valido" required />
 
