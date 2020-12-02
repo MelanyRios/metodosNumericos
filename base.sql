@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-12-2020 a las 02:41:54
+-- Tiempo de generación: 02-12-2020 a las 02:57:36
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.7
 
@@ -84,7 +84,15 @@ INSERT INTO `carrera` (`CarCod`, `CarAreCod`, `CarNom`) VALUES
 (16, 7, 'Teoría'),
 (17, 7, 'Práctica'),
 (20, 8, 'Teoría'),
-(21, 8, 'Práctica');
+(21, 8, 'Práctica'),
+(22, 11, 'Teoría'),
+(23, 11, 'Práctica'),
+(24, 10, 'Teoría\r\n'),
+(25, 10, 'Práctica'),
+(26, 12, 'Teoría'),
+(27, 12, 'Práctica'),
+(28, 9, 'Teoría'),
+(29, 9, 'Practica');
 
 -- --------------------------------------------------------
 
@@ -200,7 +208,10 @@ INSERT INTO `preguntas` (`PreCod`, `PreTesCod`, `PreNom`, `PreCarCod`) VALUES
 (80, 90, 'te guta animales', 21),
 (81, 90, 'te gusta naturialea', 20),
 (82, 90, 'te gusta el  cmapo', 20),
-(83, 90, 'verde', 21);
+(83, 90, 'verde', 21),
+(84, 92, 'Ordene los pasos a seguir para encontrar raíces con el método de la secante:', 23),
+(85, 92, 'te gusta naturialea', 22),
+(86, 92, 'te gusta el  cmapo', 22);
 
 -- --------------------------------------------------------
 
@@ -405,7 +416,16 @@ INSERT INTO `respuestas` (`ResCod`, `ResPreCod`, `ResValor`, `ResNom`) VALUES
 (192, 82, 0, 'Entre 18-20'),
 (193, 83, 1, 'h1'),
 (194, 83, 0, 'Me resulta interesante'),
-(195, 83, 0, 'Me encanta');
+(195, 83, 0, 'Me encanta'),
+(196, 84, 0, 'si'),
+(197, 84, 1, 'De vez en cuando'),
+(198, 84, 0, 'mucho'),
+(199, 85, 0, 'Sencillamente lo tomo'),
+(200, 85, 1, 'poco'),
+(201, 85, 0, 'Leo el prospecto de arriba a abajo'),
+(202, 86, 0, 'Entre 11-14'),
+(203, 86, 1, 'Entre 15-17'),
+(204, 86, 0, 'Entre 18-20');
 
 -- --------------------------------------------------------
 
@@ -441,7 +461,9 @@ INSERT INTO `test` (`TesCod`, `TesNumPre`, `TesAreCod`) VALUES
 (87, 3, 7),
 (88, 3, 7),
 (89, 4, 8),
-(90, 4, 8);
+(90, 4, 8),
+(91, 3, 11),
+(92, 3, 11);
 
 --
 -- Índices para tablas volcadas
@@ -511,7 +533,7 @@ ALTER TABLE `area`
 -- AUTO_INCREMENT de la tabla `carrera`
 --
 ALTER TABLE `carrera`
-  MODIFY `CarCod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `CarCod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `persona`
@@ -529,19 +551,19 @@ ALTER TABLE `personatest`
 -- AUTO_INCREMENT de la tabla `preguntas`
 --
 ALTER TABLE `preguntas`
-  MODIFY `PreCod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `PreCod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
 -- AUTO_INCREMENT de la tabla `respuestas`
 --
 ALTER TABLE `respuestas`
-  MODIFY `ResCod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=196;
+  MODIFY `ResCod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=205;
 
 --
 -- AUTO_INCREMENT de la tabla `test`
 --
 ALTER TABLE `test`
-  MODIFY `TesCod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `TesCod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 
 --
 -- Restricciones para tablas volcadas
