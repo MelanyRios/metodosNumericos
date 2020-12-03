@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Blog Template · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="text-muted" href="#">Intranet</a>
+      </div>
+      <div class="col-4 text-center">
+        <a class="blog-header-logo text-dark img-responsive" href="#"><img src="https://i.pinimg.com/favicons/db9e743714841d2566fa0e107ff1cdf72af64b7f6f0dad9f3905986a.png?3214d7914dfb90a0b8c1ba396fb09aed" width="20%" height="20%"></a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="btn btn-sm btn-outline-secondary" href="#">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2 bg-dark">
+    <nav class="nav d-flex justify-content-start">
+      <a class="p-2 text-white" href="#">Inicio</a>
+      <a class="p-2 text-white" href="listaMetodos.html">Test</a>
+      <a class="p-2 text-white" href="#">Universidades</a>
+    
+    </nav>
+  </div>
+
+  <div >
+    <main role="main" class="container">
+  <div class="jumbotron">
+    <center>
+        <img src="imagenes/biseccionTitle.PNG" width="800" height="200"> <br>
+    </center>
+    <p>
+        .
+    </p>
+    <p class="lead"> 
+        En matemáticas, el método de bisección es un algoritmo de búsqueda de raíces que trabaja dividiendo el intervalo a la mitad y seleccionando el subintervalo que tiene la raíz.
+    </p>
+    <p class="lead">
+        Este es uno de los métodos más sencillos y de fácil intuición para resolver ecuaciones de una variable, también conocido como Método de Intervalo Medio. Se basa en el teorema del valor intermedio (TVI), el cual establece que toda función continua f en un intervalo cerrado [a, b] toma todos los valores que se hallan entre f(a) y f(b). Esto es que todo valor entre f(a) y f(b) es la imagen de al menos un valor en el intervalo [a, b]. En caso de que f(a) y f(b) tengan signos opuestos, el valor cero sería un valor intermedio entre f(a) y f(b), por lo que con certeza existe un p en [a, b] que cumple f(p)=0. De esta forma, se asegura la existencia de al menos una solución de la ecuación f(x)=0.
+        El método consiste en lo siguiente:
+    </p>
+    <p class="lead">
+        <li class="lead">Debe existir seguridad sobre la continuidad de la función f(x) en el intervalo [a,b].</li><br>
+        <li class="lead">A continuación, se verifica que.</li><br> 
+        <li class="lead">Se calcula el punto medio m del intervalo [a, b] y se evalúa f(m) si ese valor es igual a cero, ya hemos encontrado la raíz buscada.</li><br>
+        <li class="lead">En caso de que no lo sea, verificamos si f(m) tiene signo opuesto con f(a) o con f(b).</li><br>
+        <li class="lead">Se redefine el intervalo [a, b] como [a, m] ó [m, b] según se haya determinado en cuál de estos intervalos ocurre un cambio de signo.</li><br>
+        <li class="lead">Con este nuevo intervalo se continúa sucesivamente encerrando la solución en un intervalo cada vez más pequeño, hasta alcanzar la precisión deseada.
+
+    </p>
+    <p class="lead">
+        En la n-ésima iteración. La bisección converge linealmente, por lo cual es un poco lento. Sin embargo, se garantiza la convergencia si f(a) y f(b) tienen distinto signo.
+        Si existieran más de una raíz en el intervalo entonces el método sigue siendo convergente pero no resulta tan fácil caracterizar hacia qué raíz converge el método.
+    </p>
+    <p class="lead">
+       Este método , que se utiliza para resolver ecuaciones de una variable, está basado en el “Teorema de los Valores Intermedios” (TVM), en el cual se establece que toda función continua f, en un intervalo cerrado [a,b], toma todos los valores que se hallan entre f(a) y f(b), de tal forma que la ecuación f(x)=0 tiene una sola raíz que verifica f(a).f(b) menor a 0.
+    </p>
+    <p class="lead">
+       Es el método más elemental y antiguo para determinar las raíces de una ecuación. Está basado directamente en el teorema de Bolzano explicado con anterioridad. Consiste en partir de un intervalo [x0,x1]tal que f(x0)f(x1) menor 0, por lo que sabemos que existe, al menos, una raíz real. A partir de este punto se va reduciendo el intervalo sucesivamente hasta hacerlo tan pequeño como exija la precisión que hayamos decidido emplear
+    </p>
+<center>
+    <img src="imagenes/grafica.JPG" width="400" height="500"> <br>
+</center>
+    <p class="lead">
+        <strong>EJEMPLO 1:</strong>
+    </p>
+<center>
+    <img src="imagenes/ejemplo1_0.JPG" width="700" height="1100">
+    <img src="imagenes/ejemplo1_1.JPG" width="700" height="1100"> <br>
+</center>
+    <br><br>
+    <p class="lead">
+        <strong>EJEMPLO 2:</strong>
+    </p>
+<center>
+    <img src="imagenes/ejemplo2_0.JPG" width="700" height="1100">
+    <img src="imagenes/ejemplo2_1.JPG" width="700" height="1100">
+    <img src="imagenes/ejemplo2_2.JPG" width="700" height="1100">
+</center>
+
+<footer class="blog-footer">
+  <p>Test Vocacional <a href="#">IPS</a> por <a href="#">Grupo 1</a>.</p>
+  <p>
+    <a href="#">Regresar al inicio</a>
+  </p>
+</footer>
+</body>
+</html>
