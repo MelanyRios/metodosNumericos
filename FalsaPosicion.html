@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Blog Template · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="text-muted" href="#">Intranet</a>
+      </div>
+      <div class="col-4 text-center">
+        <a class="blog-header-logo text-dark img-responsive" href="#"><img src="https://i.pinimg.com/favicons/db9e743714841d2566fa0e107ff1cdf72af64b7f6f0dad9f3905986a.png?3214d7914dfb90a0b8c1ba396fb09aed" width="20%" height="20%"></a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="btn btn-sm btn-outline-secondary" href="#">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2 bg-dark">
+    <nav class="nav d-flex justify-content-start">
+      <a class="p-2 text-white" href="#">Inicio</a>
+      <a class="p-2 text-white" href="listaMetodos.html">Test</a>
+      <a class="p-2 text-white" href="#">Universidades</a>
+    
+    </nav>
+  </div>
+
+  <div >
+    <main role="main" class="container">
+  <div class="jumbotron">
+    <h1>Metodo de Falsa-Posiciom</h1>
+    <p class="lead">También llamado método de la posición falsa se usa para resolver ecuaciones no lineales, este método tiene una convergencia súper lineal.
+        El objetivo de este método es encontrar la intersección de una recta conformada por los puntos a y b con el eje X, y obtener nuevos intervalos cada vez más pequeños, lo cual nos guiara a la aproximación de una raíz.  Es necesario que F(a) y F (b) tengan distinto signo, Dado el intervalo que contenga una raíz, es posible conseguir una mejor aproximación usando el punto (Xm; 0) en el que la recta secante L que pasa por los puntos (a;F(a)) y (b;F(b)) cruza el eje X.
+        La ventaja del método de Regula - Falsi, al igual que el de bisección, es que este es siempre convergente para funciones continuas f(x) en el intervalo. En general, converge más rápidamente que el método de bisección ya que al permanecer uno de sus valores iniciales fijo el número de cálculos se reduce mientras que el otro valor inicial converge hacia la raíz, aunque la velocidad de convergencia es baja.
+        <br>
+      <h2>Pseudocódigo</h2>
+      <img src="imagenes/cod_FalsaPosi.png"> <br>
+      <h2>Explicación</h2>
+  <p class="lead">Explicación:
+    Vamos ahora a describir paso a paso como se desarrolla el método de la regla falsa (considerando f(x) continua):<br>
+    <ol>
+        <li value="1"><p class="lead">Primero debemos encontrar unos valores iniciales xa y xb tales que:<br></li>
+        <img src="imagenes/form1_falsapos.PNG"> <br>
+        <li value="2"><p class="lead">Aproximamos a la raíz, para ello usamos:<br></li>
+        <img src="imagenes/form2_falsapos.PNG"> <br>
+        <li value="3"><p class="lead">
+            Evaluamos f(xr). Se pueden dar hasta tres casos:
+            <br>
+            <ul>
+               
+            <li type="disc" class="lead">A) Como f(xa) y f(xr) tienen signos opuestos, por la condición mencionada anteriormente deducimos que, la raíz se encuentra en el intervalo [xa, xr]</li>
+            <img src="imagenes/form3_falsapos.PNG"> <br>
+            <li type="disc" class="lead">B) f(xa) y f(xr) tienen el mismo signo. Así que xb y xr han de tener signos distintos, pues</li>
+            <img src="imagenes/form4_falsapos.PNG"> <br>
+            <img src="imagenes/form5_falsapos.PNG"> <br>
+            <p class="lead">
+           <br>Por tanto, la raíz se encuentra en el intervalo [xr, xa].<br>
+            <br><strong>*Pista: Como consideramos que la ecuación tiene que ser continua (si o si), al darse este caso, no cumpliría con la condición de continuidad, al menos que tomemos como referencia un tercer punto (xr) cuya imagen (f(xr)) será de signo opuesto.</strong><br>
+           </p>
+           <li type="disc" class="lead">C) En este caso, como f(xr)=0 ya tenemos localizada la raíz. Debemos repetir estos 3 pasos señalados anteriormente hasta que:|Ea|<Eb </li>
+          
+           
+            </ul>
+        </li>
+
+    </ol>
+
+
+<h2>Ejemplo 1</h2>
+
+<p class="lead" >Usar el método de la regla falsa para aproximar la raíz de :
+<img src="imagenes/form6_falsapos.PNG"> comenzando en el intervalo [1,2] y hasta que
+<img src="imagenes/form7_falsapos.PNG"> <br>
+</p>
+<p class="lead" >Solución <br>
+Este es el mismo ejemplo 1 del método de la bisección. Así pues, ya sabemos que    es contínua en el intervalo dado y que  toma signos opuestos en los extremos de dicho intervalo. Por lo tanto podemos aplicar el método de la regla falsa.<br>
+
+Calculamos  la primera aproximación:</p><br>
+<img src="imagenes/form8_falsapos.PNG"> <br>
+
+<p class="lead">Puesto que solamente tenemos una aproximación, debemos seguir con el proceso.<br>
+
+Así  pues, evaluamos :<br>
+<img src="imagenes/form9_falsapos.PNG"> <br>
+
+Y hacemos nuestra tabla de signos:</p><br>
+<img src="imagenes/form10_falsapos.PNG"> <br>
+
+<p class="lead" >De donde vemos que la raíz se encuentra en el intervalo 
+    <img src="imagenes/form11_falsapos.PNG"> <br>
+
+Con este nuevo intervalo,  calculamos la nueva aproximación:<br>
+<img src="imagenes/form12_falsapos.PNG"> <br>
+<img src="imagenes/form13_falsapos.PNG"> <br>
+En este momento, podemos calcular el primer error aproximado:<br>
+<img src="imagenes/form14_falsapos.PNG"> <br>
+Puesto que no se cumple el objetivo seguimoscon el proceso.<br>
+Evaluamos <img src="imagenes/form15_falsapos.PNG"> y hacemos la tabla de signos:<br>
+<img src="imagenes/form16_falsapos.PNG"><br>
+De donde vemos que la raíz se encuentra en el intervalo <img src="imagenes/form17_falsapos.PNG">,con el cual,podemos calcular la nueva aproximación:<br>
+<img src="imagenes/form18_falsapos.PNG"><br>
+<img src="imagenes/form19_falsapos.PNG"><br>
+
+Y el error aproximado:<br>
+<img src="imagenes/form20_falsapos.PNG"><br>
+ 
+Como se ha cumplido el objetivo,concluimos que la aproximación buscada es:<br></p>
+<img src="imagenes/form21_falsapos.PNG"> <br>
+
+<h2>Ejemplo 2</h2>
+<p class="lead" >Usar el método de la regla falsa para aproximar la raíz de :
+    <img src="imagenes/form22_falsapos.PNG"> comenzando en el intervalo [0,1] y hasta que
+    <img src="imagenes/form23_falsapos.PNG"> <br>
+    </p>
+
+    <p class="lead" >Solución <br>
+        las hipótesis necesarias para poder aplicar el método, es decir, que  f(x) sea contínua en el intervalo dado  y que f(x) tome signos opuestos en los extremos de dicho intervalo.
+    <br>
+    Calculamos pues, la primera aproximación:<br>
+    <img src="imagenes/form24_falsapos.PNG"> <br>
+
+    Como solamente tenemos una aproximación, debemos avanzar en el proceso.<br>
+    Evaluamos
+    <img src="imagenes/form25_falsapos.PNG"> <br>
+Y hacemos nuestra tabla de signos:<br>
+<img src="imagenes/form26_falsapos.PNG"> <br>
+
+De lo cual vemos que la raíz se localiza en el intervalo 
+<img src="imagenes/form27_falsapos.PNG"> 
+Así pues, calculamos la nueva aproximación:<br>
+<img src="imagenes/form28_falsapos.PNG"> <br>
+Y calculamos el error aproximado:<br>
+<img src="imagenes/form29_falsapos.PNG"> <br>
+Puesto que no se cumple el objetivo, seguimos avanzando en el proceso.<br>
+Evaluamos <img src="imagenes/form30_falsapos.PNG"> Y hacemos nuestra tabla de signos:<br>
+<img src="imagenes/form31_falsapos.PNG"> 
+
+De los cual vemos que la raíz se localiza en el intervalo <img src="imagenes/form32_falsapos.PNG"> 
+, con el cual podemos calcular al siguiente aproximación:<br>
+<img src="imagenes/form33_falsapos.PNG"> <br>
+
+
+
+Y el siguiente error aproximado:<br>
+<img src="imagenes/form34_falsapos.PNG"> <br>
+
+Como se ha cumplido el objetivo, concluímos que la aproximación buscada es:<br></p>
+<img src="imagenes/form35_falsapos.PNG"> 
+
+
+<h1>Ejemplo interactivo</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><iframe scrolling="no" title=" Método de Newton-Raphson 2020" src="https://www.geogebra.org/material/iframe/id/NpnFcgGY/width/931/height/462/border/888888/sfsb/true/smb/false/stb/true/stbh/true/ai/false/asb/false/sri/true/rc/true/ld/false/sdz/true/ctl/false" width="931px" height="462px" style="border:0px;"> </iframe></div>
+<br>
+    <a class="btn btn-success btn-primary" href="/docs/4.5/components/navbar/" role="button">Descargar calculadora de Metodo de  Newton &raquo;</a>
+  </div>
+</main>
+  </div>
+  
+
+  <div class="row mb-2">
+
+
+<main role="main" class="container">
+ 
+</main><!-- /.container -->
+
+<footer class="blog-footer">
+  <p>Test Vocacional <a href="#">IPS</a> por <a href="#">Grupo 1</a>.</p>
+  <p>
+    <a href="#">Regresar al inicio</a>
+  </p>
+</footer>
+</body>
+</html>
