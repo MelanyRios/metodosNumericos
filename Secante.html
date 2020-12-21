@@ -74,13 +74,12 @@
 
   <div >
     <main role="main" class="container">
-  <div class="jumbotron">
+  
+    <div class="jumbotron">
     <center>
-        <img src="imagenes/titulo2.jpg" width="800" height="200"> <br>
+        <h1>MÉTODO DE LA SECANTE</h1>
     </center>
-    <p>
-        .
-    </p>
+    
     <p class="lead"> El método de la secante puede pensarse como una aproximación al método de Newton con algunas diferencias menores, 
         en el que la derivada se sustituye por la línea secante.
         Utilizamos la raíz de la línea secante (el valor de x tal que y=0) como aproximación de la raíz para la función f.
@@ -104,9 +103,74 @@
       <br>
       —> la diferencia entre dos хk posteriores es menor que ε.
     </p>
+    <h1>Ejemplo 1</h1>
+    <p>
+      Usar el método de la secante para aproximar la raíz de:
+    </p>
+    <img src="Imagenes/1.png">
+    <p>
+      Comenzando con x0=0 y x1=1, y hasta que |Ea| < 1%
+      <br><br>
+      1° Sustituimos los valores de x en la función:<br>
+      f(x0)=1<br>
+      f(x1)= -0.632120558
+      <br><br>
+      2° Sustituimos, en la fórmula de la secante esos valores, para calcular la primera aproximación, que denotamos como x2:<br>
+      <img src="Imagenes/2.png">
+      <br><br>
+      3° Calculamos el error aproximado:<br>
+      <img src="Imagenes/3.png"><br>
+      <br>
+      4° Todavía no cumplimos nuestro objetivo, así que nos tocaría repetir el proceso de nuevo desde el paso 1, usando x1 y x2 en vez de x0, hallando un nuevo punto, que llamaríamos x3, y así sucesivamente.
 
+ 
 
+      <br>A continuación os pego la tabla con los resultados. La primera columna son los «x», y la segunda los errores relativos (Ea).
+      <center>
+        <img src="Imagenes/4sec.png"><br>
+      </center>
+      <br>
+      Por tanto, concluimos que la aproximación de la raíz es x4=0.652917265 con un |Ea|=0.08%
 
-<div><iframe scrolling="no" title="Método de la Secante" src="https://www.geogebra.org/material/iframe/id/gtuVuStu/width/627/height/520/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="627px" height="520px" style="border:0px;"> </iframe></div>
+    </p>
+    <h1>Ejemplo 2</h1>
+    <p>
+      Usar el método de la secante para aproximar la raiz de: <h5>f(x) = arctan x - 2x + 1</h5>
+      comenzando con x0=0 y x1=1, hasta que |e| < 1%<br> 
+    </p>
+    <p>
+      Por lo tanto:<br>
+      f(x0)=1<br>
+      f(x1)=-0.214601836<br>
+      Esto sustituir en la formula de la secante para obtener la aproximación x2:<br>
+      <center>
+        <img src="Imagenes/5sec.png"><br>
+      </center>
+      Con un error aproximado de:<br>
+      <center>
+        <img src="Imagenes/6sec.png"><br>
+      </center>
+      Como todavía no se logra el objetivo, se continua con el proceso.<br> 
+      Obteniendo la siguiente tabla:<br>
+      <center>
+        <img src="Imagenes/7sec.png"><br>
+      </center>
+      De lo cual concluímos que la aproximación a la raíz es:<br>
+      <center>
+        <img src="Imagenes/8sec.png"><br>
+      </center>
+      Veremos a continuación un ejemplo del metódo de la secante, con la siguiente ecuación:<br>
+      <center>
+        <img src="Imagenes/9sec.png"><br>
+      </center>
+    </p>
+    <h1>Ejemplo interactivo</h1>
+    
+    <center>
+      <div><iframe scrolling="no" title=" Método de Newton-Raphson 2020" src="https://www.geogebra.org/classic/qqsjDrqc" width="931px" height="462px" style="border:0px;"> </iframe></div>
+
+    </center>
+  </div>
+
 </body>
 </html>
