@@ -20,13 +20,13 @@
 		)
 	);
 	
-	$mail->Username = 'testvocacional.20@gmail.com'; //Correo de donde enviaremos los correos
-	$mail->Password = '*Abcd1234'; // Password del correo de envío
+	$mail->Username = 'testmetodosnumericosraices@gmail.com'; //Correo de donde enviaremos los correos
+	$mail->Password = 'TestMetodosNumericosRaices0912873465'; // Password del correo de envío
 	
-	$mail->setFrom('testvocacional.20@gmail.com', 'Test Vocacional');//emisor
+	$mail->setFrom('testmetodosnumericosraices@gmail.com', 'Test Vocacional');//emisor
 	$mail->addAddress($correodestino, 'Receptor'); //Correo receptor
 	
-	$mail->Subject = 'Resultados de su Test Vocacional';
+	$mail->Subject = 'Resultados de su Test';
 
 	
     $array = explode("#", $t);

@@ -168,19 +168,15 @@ if (isset($_POST['respuestas_TestVo'])) {
         <a class="blog-header-logo text-dark img-responsive" href="#"><img src="https://i.pinimg.com/favicons/db9e743714841d2566fa0e107ff1cdf72af64b7f6f0dad9f3905986a.png?3214d7914dfb90a0b8c1ba396fb09aed" width="20%" height="20%"></a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
-        <a class="btn btn-sm btn-outline-secondary" href="#">Login</a>
+        <a class="btn btn-sm btn-outline-secondary" href="#">Guia</a>
       </div>
     </div>
   </header>
 
   <div class="nav-scroller py-1 mb-2 bg-dark">
     <nav class="nav d-flex justify-content-start">
-      <a class="p-2 text-white" href="ini.html">Inicio</a>
-      <a class="p-2 text-white" href="listaTests.html">Test</a>
-      <a class="p-2 text-white" href="universidades.php">Universidades</a>
-      
-
-      
+      <a class="p-2 text-white" href="idex.html">Inicio</a>
+      <a class="p-2 text-white" href="listaMetodos.html">Test</a>
     </nav>
   </div>
 <div class="row mb-2">
