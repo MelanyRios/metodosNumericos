@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.0.1">
-    <title>Métodos Numéricos</title>
+    <title>Raices de Ecuaciones</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">
 
@@ -49,27 +49,27 @@
   </head>
   <body>
     <div class="container">
-  <header class="blog-header py-3">
+ <header class="blog-header py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-4 pt-1">
-        <a class="text-muted" href="#">Intranet</a>
+        <a class="text-muted" href="datos.html">Intranet</a>
       </div>
       <div class="col-4 text-center">
         <a class="blog-header-logo text-dark img-responsive" href="#"><img src="https://i.pinimg.com/favicons/db9e743714841d2566fa0e107ff1cdf72af64b7f6f0dad9f3905986a.png?3214d7914dfb90a0b8c1ba396fb09aed" width="20%" height="20%"></a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
-        <a class="btn btn-sm btn-outline-secondary" href="#">Login</a>
+        <a class="btn btn-sm btn-outline-secondary" href="https://www.youtube.com/playlist?list=PL7Yf50nufDKzqxg0DVGvbfdg3OCgyntjx">Guia</a>
       </div>
     </div>
   </header>
 
-  <div class="nav-scroller py-1 mb-2 bg-dark">
+   <div class="nav-scroller py-1 mb-2 bg-dark">
     <nav class="nav d-flex justify-content-start">
-      <a class="p-2 text-white" href="#">Inicio</a>
-      <a class="p-2 text-white" href="listaTests.html">Test</a>
-
-
+      <a class="p-2 text-white" href="index.html">Inicio</a>
+      <a class="p-2 text-white" href="listaMetodos.html">Metodos</a>
       
+      <a class="p-2 text-white" href="HacerTest.php?id=97">Test</a>
+
     </nav>
   </div>
 
