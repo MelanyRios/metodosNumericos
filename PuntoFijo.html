@@ -74,9 +74,8 @@
   <div >
     <main role="main" class="container">
   <div class="jumbotron">
-    <center>
-        <img src="imagenes/titulo1.jpg" width="800" height="200"> <br>
-    </center>
+    <div class="jumbotron">
+      <h1>Metodo Punto Fijo</h1>
     <p>
         .
     </p>
@@ -89,18 +88,145 @@
         solución de la ecuación X=g(x) es obtener el siguiente valor inicial 
         y de este modo se repite el método según el número de iteraciones o hasta que el error sea menor que 
         la tolerancia y por último se saca el error por cada iteración ya sea absoluto o relativo.
-    <br>
-    <p>
-        .
     </p>
-<center>
-    <img src="imagenes/ejemploPuntoFijo1.jpg" width="800" height="1200"> <br>
-</center>
-<center>
-    <img src="imagenes/ejemploPuntoFijo2.jpg" width="800" height="1200"> <br>
-</center>
+        <p  class="lead">
+
+      
+         Teorema del punto fijo (para funciones reales derivables). Sean a, b ∈ R tales
+        que a < b y sea g: [a, b] → R una funci´on continua en [a, b] y derivable en (a, b) que
+        cumple las siguientes condiciones:
+       </p>
+       <p  class="lead">
+        1. Existe un numero C ∈ [0, 1) tal que para cualquier x ∈ (a, b) se cumple la desigualdad 
+        |g '(x)| ≤ C.
+       </p>
+       <p  class="lead">
+        2. Para cualquier punto x en [a, b], se tiene que g(x) ∈ [a, b].
+       </p>
+
+       <p  class="lead">
+       Entonces existe un unico punto p ∈ (a, b) tal que g(p) = p. Ademas, si x0 es algun punto
+        del intervalo [a, b], y la sucesion <img src="imagenes/fig_2.jpeg" width="70" height="40">
+        se construye de manera recursiva con el metodo
+        de iteracion simple:
+
+        <img src="imagenes/fig_1.jpeg" width="150" height="40"> 
+       </p>
+       <p  class="lead">
+        
+       entonces la sucesion <img src="imagenes/fig_2.jpeg" width="70" height="40"> converge al punto fijo p de la funci´on g.
+      </p>
+      
+      <p  class="lead">
+        En ejemplos simples es como denotar por C al maximo de |g'(x)| en le intervalo [a, b]:
+        <img src="imagenes/fig_3.jpeg" width="170" height="40"> calcularlo y verificar que C < 1.
+      </p>
+
+      <p  class="lead">
+        Ejemplo. Sea g: [0.64, 1.44] → R, <img src="imagenes/fig_4.jpeg" width="110" height="40">
+
+      </p>
 
 
+      <p  class="lead">
+        
+        Mostrar que g es una funcion contractiva, calcular su punto fijo y hacer las primeras 5
+        iteracion del m´etodo del punto fijo empezando con x0 = 0.64.
+      </p>
+
+
+      <p  class="lead">
+        Solucion. I. Calculemos la derivada de g: <img src="imagenes/fig_5.jpeg" width="110" height="40">
+
+      </p>
+
+
+      <p  class="lead">
+        Se ve que g' es una funcion positiva y decreciente, por eso es facil calcular el maximo de
+su valor absoluto: <img src="imagenes/fig_6.jpeg" width="630" height="50">
+
+      </p>
+
+
+      <p  class="lead">
+        II. Luego hay que demostrar que g([0.64, 1.44]) ⊂ [0.64, 1.44]. Calculemos los valores
+mınimo y maximo de g en el intervalo [0.64, 1.44]. Como g' > 0, la funcion g es creciente,<img src="imagenes/fig_7.jpeg" width="630" height="50"> y g([0.64, 1.44]) = [g(0.64), g(1.44)] = [0.8, 1.2].
+
+      </p>
+
+      <p  class="lead">
+        
+        Observamos que 0.64 < 0.8 y 1.2 < 1.44, ası que [0.8, 1.2] ⊂ [0.64, 1.44].
+      </p>
+
+
+      <p  class="lead">
+        III. En los incisos I y II demostramos que <img src="imagenes/fig_8.jpeg" width="460" height="60">
+
+      </p>
+      <p  class="lead">
+        IV. La ecauci´on g(x) = x tiene dos soluciones, 0 y 1, de las cuales s´olo una pertenece al
+        intervalo [0.64, 1.44]. Resumen: el punto fijo es 1.
+
+      </p>
+      <p  class="lead">
+
+        V. El punto fijo se puede aproximar con el metodo de iteraci´on simple, empezando con
+cualquier punto x0 del intervalo [0.64, 1.44]. Hagamos 5 iteraciones empezando con x0 =
+0.64:
+      </p>
+      <p  class="lead">
+
+        <img src="imagenes/fig_9.jpeg" width="580" height="110">
+      </p>
+      <p  class="lead">
+
+        Ejemplo. Consideramos la funcion
+      </p>
+      <p  class="lead">
+        <img src="imagenes/fig_10.jpeg" width="220" height="70">
+        en el intervalo [1.5, 3].
+      </p>
+      <p  class="lead">
+        Calculamos su derivada:
+        <img src="imagenes/fig_11.jpeg" width="450" height="70">
+        
+      </p>
+      <p  class="lead">
+        Se ve que g' es una funci´on creciente; tambien es f´acil comprobarlo con la segunda derivada:
+        <img src="imagenes/fig_12.jpeg" width="180" height="70">
+        
+      </p>
+      <p  class="lead">
+        Como g'es creciente,
+        <img src="imagenes/fig_13.jpeg" width="460" height="60">
+      </p>
+      <p  class="lead">
+        Calculamos C como el maximo valor absoluto de g'
+        <img src="imagenes/fig_14.jpeg" width="460" height="60">
+        
+      </p>
+      <p  class="lead">
+        La constante C satisface la condicion C < 1. Ahora vamos a calcular g([1.5, 3]). Notemos
+que g' se anula en el punto 2, por eso es suficiente calcular los valores de g en el punto 2
+y en los extremos del intervalo:
+<img src="imagenes/fig_15.jpeg" width="480" height="120"> 
+      </p>
+      <p  class="lead">
+        Acabamos de verificar que se cumplen las condiciones del teorema. Calculemos las primeras 5 iteraciones empezando con el punto x0 = 3:
+        <img src="imagenes/fig_16.jpeg" width="340" height="90">
+        
+      </p>
+      <p  class="lead">
+
+        Para k = 4, 5, . . . los valores de xk ya est´an muy cerca del punto fijo 2.
+      </p>
+      
+
+        
+      </p>
+
+      
 
 
 <footer class="blog-footer">
