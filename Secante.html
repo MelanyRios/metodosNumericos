@@ -75,11 +75,9 @@
     <main role="main" class="container">
   <div class="jumbotron">
     <center>
-        <img src="imagenes/titulo2.jpg" width="800" height="200"> <br>
+        <h1>Método de la secante</h1>
     </center>
-    <p>
-        .
-    </p>
+    
     <p class="lead"> El método de la secante puede pensarse como una aproximación al método de Newton con algunas diferencias menores, 
         en el que la derivada se sustituye por la línea secante.
         Utilizamos la raíz de la línea secante (el valor de x tal que y=0) como aproximación de la raíz para la función f.
@@ -103,7 +101,39 @@
       <br>
       —> la diferencia entre dos хk posteriores es menor que ε.
     </p>
+    <h1>Ejemplo 1</h1>
+    <p>
+      Usar el método de la secante para aproximar la raíz de:
+    </p>
+    <img src="Imagenes/1.png">
+    <p>
+      Comenzando con x0=0 y x1=1, y hasta que |Ea| < 1%
+      <br><br>
+      1° Sustituimos los valores de x en la función:<br>
+      f(x0)=1<br>
+      f(x1)= -0.632120558
+      <br><br>
+      2° Sustituimos, en la fórmula de la secante esos valores, para calcular la primera aproximación, que denotamos como x2:<br>
+      <img src="Imagenes/2.png">
+      <br><br>
+      3° Calculamos el error aproximado:<br>
+      <img src="Imagenes/3.png"><br>
+      <br>
+      4° Todavía no cumplimos nuestro objetivo, así que nos tocaría repetir el proceso de nuevo desde el paso 1, usando x1 y x2 en vez de x0, hallando un nuevo punto, que llamaríamos x3, y así sucesivamente.
 
+ 
+
+      <br>A continuación os pego la tabla con los resultados. La primera columna son los «x», y la segunda los errores relativos (Ea).
+      <center>
+        <img src="Imagenes/4sec.png"><br>
+      </center>
+      <br>
+      Por tanto, concluimos que la aproximación de la raíz es x4=0.652917265 con un |Ea|=0.08%
+
+    </p>
+    <h1></h1>
+
+  </div>
 
 
 <footer class="blog-footer">
