@@ -1,13 +1,14 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.0.1">
     <title>Raices de Ecuaciones</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">
 
     <!-- Bootstrap core CSS -->
@@ -24,12 +25,127 @@
 <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
 
-
     <style>
-        body{
-            background-image: url(https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-        }
-      .bd-placeholder-img {
+        .posts {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:url("background.jpg");
+  overflow: hidden;
+}
+.card {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+  
+
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:30px;
+}
+.card-image {
+  grid-area: image;
+  background: url("imagenes/metodosnumericos.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+.card-text .date {
+  color: rgb(255, 7, 110);
+  font-size:13px;
+}
+.card-text p {
+  color: grey;
+  font-size:15px;
+  font-weight: 300;
+}
+.card-text h2 {
+  margin-top:0px;
+  font-size:28px;
+}
+.card-stats {
+  grid-area: stats; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 7, 110);
+}
+.card-stats .stat {
+  padding:10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+.card-stats .border {
+  border-left: 1px solid rgb(172, 26, 87);
+  border-right: 1px solid rgb(172, 26, 87);
+}
+.card-stats .value{
+  font-size:22px;
+  font-weight: 500;
+}
+.card-stats .value sup{
+  font-size:12px;
+}
+.card-stats .type{
+  font-size:11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+/*card2*/
+.card-image.card2 {
+  background: url("imagenes/metodosnumericos.png");
+  background-size: cover;
+}
+.card-text.card2 .date {
+  color: rgb(255, 77, 7);
+}
+.card-stats.card2 .border {
+  border-left: 1px solid rgb(185, 67, 20);
+  border-right: 1px solid rgb(185, 67, 20);
+}
+.card-stats.card2 {
+  background: rgb(255, 77, 7);
+}
+/*card3*/
+.card-image.card3 {
+  background: url("imagenes/metodosnumericos.png");
+  background-size: cover;
+}
+.card-text.card3 .date {
+  color: rgb(0, 189, 63);
+}
+.card-stats.card3 .border {
+  border-left: 1px solid rgb(14, 122, 50);
+  border-right: 1px solid rgb(14, 122, 50);
+}
+.card-stats.card3 {
+  background: rgb(0, 189, 63);
+}
+.bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
@@ -44,52 +160,269 @@
         }
       }
     </style>
-    <!-- Custom styles for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="blog.css" rel="stylesheet">
+
+
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="blog.css" rel="stylesheet">
+
   </head>
   <body>
-    <div class="container">
-  <header class="blog-header py-3">
-    <div class="row flex-nowrap justify-content-between align-items-center">
-      <div class="col-4 pt-1">
-        <a class="text-muted" href="datos.html">Desarrolladores</a>
-      </div>
-      <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark img-responsive" href="#"><img src="https://i.pinimg.com/favicons/db9e743714841d2566fa0e107ff1cdf72af64b7f6f0dad9f3905986a.png?3214d7914dfb90a0b8c1ba396fb09aed" width="20%" height="20%"></a>
-      </div>
-      <div class="col-4 d-flex justify-content-end align-items-center">
-        <a class="btn btn-sm btn-outline-secondary" href="https://www.youtube.com/playlist?list=PLzIyH1zIAXOIpl0yc7CQL8pw_qmoqS3zK">Guia</a>
-      </div>
-    </div>
-  </header>
 
-  <div class="nav-scroller py-1 mb-2 bg-dark">
-    <nav class="nav d-flex justify-content-start">
-      <a class="p-2 text-white" href="index.html">Inicio</a>
-      <a class="p-2 text-white" href="listaMetodos.html">Teoria y Ejemplos</a>
-      <a class="p-2 text-white" href="calculadoras.html">Calculadoras</a>
+    <div class="container" style="background:beige";>
+        <header class="blog-header py-3">
+          <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-4 pt-1">
+           
+            </div>
+            <div class="col-4 text-center">
+              <a class="blog-header-logo text-dark img-responsive" href="#"><img src="https://i.pinimg.com/favicons/db9e743714841d2566fa0e107ff1cdf72af64b7f6f0dad9f3905986a.png?3214d7914dfb90a0b8c1ba396fb09aed" width="20%" height="20%"></a>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+            </div>
+          </div>
+        </header>
       
-    </nav>
-  </div>
+        <div class="nav-scroller py-1 mb-2 bg-dark">
+          <nav class="nav d-flex justify-content-start">
+            <a class="p-2 text-white" href="index.html">Inicio</a>
+            <a class="p-2 text-white" href="datos.html">Nosotros</a>
 
-  <div class="jumbotron p-4 p-md-5 text-white rounded bg-primary">
-    <div class="col-md-6 px-0">
-      <h1 class="display-4 font-italic">Raices de ecuaciones (Métodos Numéricos)</h1>
+            <a class="p-2 text-white" href="MANUAL.pdf" target="_blank">Guía de usuario</a>
+            <a class="p-2 text-white" href="calculadoras.html">Test General</a> 
+            <a class="p-2 text-white" href="https://www.youtube.com/playlist?list=PLzIyH1zIAXOIpl0yc7CQL8pw_qmoqS3zK">Recursos</a> 
+          </nav>
+        </div>
+      
+        <div class="jumbotron p-4 p-md-5 text-white rounded bg-primary">
+          <div class="col-md-6 px-0">
+            <h1 class="display-4 font-italic">Raices de ecuaciones (Métodos Numéricos)</h1>
+      
+          </div>
+        </div>
+        
+      
+        <div class="row mb-2">
+      
+      
+      
+      <main role="main" class="container">
+       
+      </main><!-- /.container -->
+      
+      
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="posts">
+    <div class="card">
+      <div class="card-image"></div>
+      <div class="card-text">
+        <span class="date">Video</span>
+        <h2>BISECCIÓN</h2>
+        <p>El método de bisección es un algoritmo de búsqueda de raíces que trabaja dividiendo el intervalo a la mitad y seleccionando el subintervalo que tiene la raíz.</p>
+      </div>
+      <div class="card-stats">
+        <div class="stat">
+         
+            <button onclick="location.href='Biseccion.html'" style="background: transparent;border: none;color:white;font-size:11px";>TEORIA</button>
+       
+        </div>
+        <div class="stat border">
+        
+          
+          <button onclick="location.href='HacerTest.html'" style="background: transparent;border: none;color:white;font-size:11px";>TEST</button>
+        </div>
+        <div class="stat">
+         
+          
+          <button onclick="location.href=''" style="background: transparent;border: none;color:white;font-size:11px";>CALCULADORA</button>
+        </div>
+      </div>
     </div>
-  </div>
-  
+    <div class="card">
+      <div class="card-image card2"></div>
+      <div class="card-text card2">
+        <span class="date">Video</span>
+        <h2>FALSA POSICIÓN</h2>
+        <p>En cálculo numérico, el método de la regula falsi (regla del falso) o falsa posición es un método iterativo de resolución numérica de ecuaciones no lineales.</p>
+      </div>
+      <div class="card-stats card2">
+        <div class="stat">
+          
+          
+          <button onclick="location.href='FalsaPosicion.html'" style="background: transparent;border: none;color:white;font-size:11px";>TEORIA</button>
+        </div>
+        <div class="stat border">
+         
+          <div class="type">TEST</div>
+        </div>
+        <div class="stat">
+         
+          <div class="type">CALCULADORA</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+        <div class="card-image card3"></div>
+        <div class="card-text card3">
+          <span class="date">Video</span>
+          <h2>PUNTO FIJO</h2>
+          <p>El método del punto fijo es un método iterativo que permite resolver sistemas de ecuaciones no necesariamente lineales.</p>
+        </div>
+        <div class="card-stats card3">
+          <div class="stat">
+            
+            <button onclick="location.href='PuntoFijo.html'" style="background: transparent;border: none;color:white;font-size:11px";>TEORIA</button>
+          </div>
+          <div class="stat border">
+        
+            <div class="type">TEST</div>
+          </div>
+          <div class="stat">
+           
+            <div class="type">CALCULADORA</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
 
-  <div class="row mb-2">
+    <div class="posts">
+        <div class="card">
+          <div class="card-image"></div>
+          <div class="card-text">
+            <span class="date">Video</span>
+            <h2>NEWTON-RAPHSON</h2>
+            <p>En análisis numérico, el método de Newton es un algoritmo para encontrar aproximaciones de los ceros o raíces de una función real. 
 
+            </p>
+          </div>
+          <div class="card-stats">
+            <div class="stat">
+             
+                <button onclick="location.href='NewtonRaphson.html'" style="background: transparent;border: none;color:white;font-size:11px";>TEORIA</button>
+            </div>
+            <div class="stat border">
+            
+              <div class="type">TEST</div>
+            </div>
+            <div class="stat">
+             
+              <div class="type">CALCULADORA</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image card2"></div>
+          <div class="card-text card2">
+            <span class="date">Video</span>
+            <h2>SECANTE</h2>
+            <p>En análisis numérico el método de la secante es un método para encontrar los ceros de una función de forma iterativa.
+</p>
+          </div>
+          <div class="card-stats card2">
+            <div class="stat">
+              
+              
+              <button onclick="location.href='Secante.html'" style="background: transparent;border: none;color:white;font-size:11px";>TEORIA</button>
+            </div>
+            <div class="stat border">
+             
+              <div class="type">TEST</div>
+            </div>
+            <div class="stat">
+             
+              <div class="type">CALCULADORA</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+            <div class="card-image card3"></div>
+            <div class="card-text card3">
+              <span class="date">Video</span>
+              <h2>MULLER</h2>
+              <p>
+                Muller es utilizado para encontrar raíces de ecuaciones  con raíces múltiples, y consiste en obtener los coeficientes de la parábola que pasa por tres puntos elegidos. 
+              </p>
+            </div>
+            <div class="card-stats card3">
+              <div class="stat">
+                
+                
+                <button onclick="location.href='Biseccion.html'" style="background: transparent;border: none;color:white;font-size:11px";>TEORIA</button>
+              </div>
+              <div class="stat border">
+            
+                <div class="type">TEST</div>
+              </div>
+              <div class="stat">
+               
+                <div class="type">CALCULADORA</div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="posts">
+            <div class="card">
+              <div class="card-image"></div>
+              <div class="card-text">
+                <span class="date">Video</span>
+                <h2>BAIRSTOW</h2>
+                <p>En análisis numérico, el método de Bairstow es un algoritmo eficiente de búsqueda de las raíces de un polinomio real de grado arbitrario. </p>
+              </div>
+              <div class="card-stats">
+                <div class="stat">
+                 
+                    <button onclick="location.href='Biseccion.html'" style="background: transparent;border: none;color:white;font-size:11px";>TEORIA</button>
+                </div>
+                <div class="stat border">
+                
+                  <div class="type">TEST</div>
+                </div>
+                <div class="stat">
+                 
+                  <div class="type">CALCULADORA</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image card2"></div>
+              <div class="card-text card2">
+                <span class="date">Video</span>
+                <h2>MÉTODO GRAFICO</h2>
+                <p>Adipisicing elit. Ducimus, repudiandae corrupti amet temporibus omnis provident illum maxime quod. Lorem ipsum dolor</p>
+              </div>
+              <div class="card-stats card2">
+                <div class="stat">
+                  
+                    <button onclick="location.href='Biseccion.html'" style="background: transparent;border: none;color:white;font-size:11px";>TEORIA</button>
+                </div>
+                <div class="stat border">
+                 
+                  <div class="type">TEST</div>
+                </div>
+                <div class="stat">
+                 
+                  <div class="type">CALCULADORA</div>
+                </div>
+              </div>
+            </div>
+        
 
-
-<main role="main" class="container">
- 
-</main><!-- /.container -->
-
-<footer class="blog-footer">
-</body>
+    <footer class="blog-footer"></footer>
+  </body>
 </html>
