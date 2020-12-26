@@ -48,30 +48,31 @@
     <link href="blog.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
- <header class="blog-header py-3">
-    <div class="row flex-nowrap justify-content-between align-items-center">
-      <div class="col-4 pt-1">
-        <a class="text-muted" href="datos.html">Intranet</a>
-      </div>
-      <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark img-responsive" href="#"><img src="https://i.pinimg.com/favicons/db9e743714841d2566fa0e107ff1cdf72af64b7f6f0dad9f3905986a.png?3214d7914dfb90a0b8c1ba396fb09aed" width="20%" height="20%"></a>
-      </div>
-      <div class="col-4 d-flex justify-content-end align-items-center">
-        <a class="btn btn-sm btn-outline-secondary" href="https://www.youtube.com/playlist?list=PL7Yf50nufDKzqxg0DVGvbfdg3OCgyntjx">Guia</a>
-      </div>
-    </div>
-  </header>
-
-   <div class="nav-scroller py-1 mb-2 bg-dark">
-    <nav class="nav d-flex justify-content-start">
-      <a class="p-2 text-white" href="index.html">Inicio</a>
-      <a class="p-2 text-white" href="listaMetodos.html">Metodos</a>
+    <div class="container" style="background:white";>
+        <header class="blog-header py-3">
+          <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-4 pt-1">
+           
+            </div>
+            <div class="col-4 text-center">
+              <a class="blog-header-logo text-dark img-responsive" href="#"><img src="https://i.pinimg.com/favicons/db9e743714841d2566fa0e107ff1cdf72af64b7f6f0dad9f3905986a.png?3214d7914dfb90a0b8c1ba396fb09aed" width="20%" height="20%"></a>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+            </div>
+          </div>
+        </header>
       
-      <a class="p-2 text-white" href="HacerTest.php?id=97">Test</a>
+        <div class="nav-scroller py-1 mb-2 bg-dark">
+          <nav class="nav d-flex justify-content-start">
+            <a class="p-2 text-white" href="index.html">Inicio</a>
+            <a class="p-2 text-white" href="datos.html">Nosotros</a>
 
-    </nav>
-  </div>
+            <a class="p-2 text-white" href="MANUAL.pdf" target="_blank">Guía de usuario</a>
+            <a class="p-2 text-white" href="HacerTest.php?id=97">Test General</a> 
+            <a class="p-2 text-white" href="https://www.youtube.com/playlist?list=PLzIyH1zIAXOIpl0yc7CQL8pw_qmoqS3zK">Recursos</a> 
+          </nav>
+        </div>
+      
 
 
 <?php
