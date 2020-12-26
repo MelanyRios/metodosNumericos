@@ -160,36 +160,37 @@ if (isset($_POST['respuestas_TestVo'])) {
   <body>
     <div class="container">
   <header class="blog-header py-3">
-    <div class="row flex-nowrap justify-content-between align-items-center">
-      <div class="col-4 pt-1">
-        <a class="text-muted" href="datos.html">Intranet</a>
-      </div>
-      <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark img-responsive" href="#"><img src="https://i.pinimg.com/favicons/db9e743714841d2566fa0e107ff1cdf72af64b7f6f0dad9f3905986a.png?3214d7914dfb90a0b8c1ba396fb09aed" width="20%" height="20%"></a>
-      </div>
-      <div class="col-4 d-flex justify-content-end align-items-center">
-        <a class="btn btn-sm btn-outline-secondary" href="https://www.youtube.com/playlist?list=PL7Yf50nufDKzqxg0DVGvbfdg3OCgyntjx">Guia</a>
-      </div>
-    </div>
-  </header>
+          <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-4 pt-1">
+           
+            </div>
+            <div class="col-4 text-center">
+              <a class="blog-header-logo text-dark img-responsive" href="#"><img src="https://i.pinimg.com/favicons/db9e743714841d2566fa0e107ff1cdf72af64b7f6f0dad9f3905986a.png?3214d7914dfb90a0b8c1ba396fb09aed" width="20%" height="20%"></a>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+            </div>
+          </div>
+        </header>
 
   <div class="nav-scroller py-1 mb-2 bg-dark">
-    <nav class="nav d-flex justify-content-start">
-      <a class="p-2 text-white" href="index.html">Inicio</a>
-      <a class="p-2 text-white" href="listaMetodos.html">Teoria y Ejemplos</a>
-      <a class="p-2 text-white" href="calculadoras.html">Calculadoras</a>
-      
-    </nav>
-  </div>
+          <nav class="nav d-flex justify-content-start">
+            <a class="p-2 text-white" href="index.html">Inicio</a>
+            <a class="p-2 text-white" href="datos.html">Nosotros</a>
+
+            <a class="p-2 text-white" href="MANUAL.pdf" target="_blank">Guía de usuario</a>
+            <a class="p-2 text-white" href="HacerTest.php?id=97">Test General</a> 
+            <a class="p-2 text-white" href="https://www.youtube.com/playlist?list=PLzIyH1zIAXOIpl0yc7CQL8pw_qmoqS3zK">Recursos</a> 
+          </nav>
+        </div>
 <div class="row mb-2">
     <div class="col-md-5">
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary">Resultados</strong>
-          <h3 class="mb-0">Test Vocacional</h3>
+          <h3 class="mb-0">Test </h3>
           <!--<div class="mb-1 text-muted">Fecha</div> -->
           <br>
-          <p class="card-text mb-auto">¡Felicidades! Has finalizado tu test de orientación vocacional. Revisa las estadísticas para saber cuáles son tus puntos fuertes. </p>
+          <p class="card-text mb-auto">¡Felicidades! Has finalizado tu test. Revisa las estadísticas para saber cuáles son tus puntos fuertes. </p>
           <br>
           <form  method="POST">
           <?php
@@ -302,12 +303,12 @@ beginAtZero: true
         
       </div>
     </div>
-    <div class="col-md-12">
+    <!--div class="col-md-12">
          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary">Enviar los resultados al correo electronico</strong>
 
- <!--determinar el tipo de información-->
+ 
  <p>Puedes enviarte los resultados a tu correo electrónico para consultarlos más tarde. También es posible mandarlos a la dirección de tu maestro u orientador para evaluar tus conocimientos.</p>
 <strong>Email: </strong>
 <input type="email" class="col-md-5 mb-5" id="direccion" name="correo" placeholder="Introduce un correo valido" required />
@@ -322,7 +323,7 @@ beginAtZero: true
 
 </div>
 </div>
-</div>
+</div-->
 
 
 
